@@ -256,6 +256,15 @@ section{padding:110px 0;position:relative}
 .price .unit{font-family:'Noto Sans JP',sans-serif;font-size:.9rem;letter-spacing:.2em;color:var(--mist);margin-left:10px}
 .price-sub{margin-top:14px;font-size:.8rem;color:var(--mist);letter-spacing:.14em}
 .plan-items{list-style:none}
+.included{margin-top:56px;border:1px solid var(--champagne);background:linear-gradient(160deg,rgba(201,169,107,.08),transparent 60%),var(--obsidian);padding:44px 40px}
+.included-title{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(1.15rem,2.2vw,1.5rem);letter-spacing:.08em;color:var(--ivory)}
+.included-sub{margin-top:12px;font-size:.85rem;color:var(--mist);letter-spacing:.06em}
+.included-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
+.included-list li{position:relative;padding-left:26px;font-size:.9rem;line-height:1.7;color:var(--ivory);letter-spacing:.03em}
+.included-list li::before{content:'';position:absolute;left:0;top:.55em;width:12px;height:7px;border-left:2px solid var(--champagne);border-bottom:2px solid var(--champagne);transform:rotate(-45deg)}
+.included-list .ic-h{display:block;font-size:.72rem;letter-spacing:.18em;color:var(--champagne);margin-bottom:3px;text-transform:uppercase}
+.included-foot{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:.78rem;color:var(--mist);letter-spacing:.04em}
+@media(max-width:720px){.included-list{grid-template-columns:1fr;gap:16px}.included{padding:34px 26px}}
 .plan-items li{
   padding:26px 0;border-bottom:1px solid var(--line);
   display:flex;justify-content:space-between;gap:24px;align-items:baseline;
@@ -526,9 +535,9 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 [data-target]{cursor:pointer}
 .compare .amt{
   display:inline-block;
-  font-family:'Cormorant Garamond','Noto Sans JP',serif;
-  font-size:1.5em;font-weight:600;line-height:1.3;color:var(--ivory);
-  letter-spacing:.02em;
+  font-family:'Noto Sans JP','Helvetica Neue',Arial,sans-serif;
+  font-size:1.5em;font-weight:700;line-height:1.35;color:var(--ivory);
+  letter-spacing:.01em;font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1;
 }
 .compare .velora .amt{color:var(--champagne);font-size:1.7em}
 /* reasons */
@@ -621,11 +630,11 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </div>
       <div class="concept-cell">
         <h3>保険も駐車場も、すべて込み</h3>
-        <p>対人・対物・車両保険に加え、駐車場代も月額に含まれます。保管は伊勢原駅から徒歩1分の屋内立体駐車場。雨風や紫外線から愛車を守り、電車なら手ぶらで、マイカーならそのまま乗り換えて走り出せます。</p>
+        <p>対人・対物・車両保険に加え、駐車場代も月額に含まれます。保管は伊勢原駅から徒歩1分の屋内駐車場。雨風や紫外線から愛車を守り、電車なら手ぶらで、マイカーならそのまま乗り換えて走り出せます。</p>
       </div>
       <div class="concept-cell">
-        <h3>2年間、じっくり付き合う</h3>
-        <p>2年契約だからこそ、一台と深く向き合える。週末のドライブが、日常を変える習慣になる。それが私たちの考える「豊かさ」です。</p>
+        <h3>1年間、じっくり付き合う</h3>
+        <p>1年契約だからこそ、一台とじっくり向き合える。週末のドライブが、日常を変える習慣になる。それが私たちの考える「豊かさ」です。</p>
       </div>
     </div>
   </div>
@@ -781,19 +790,31 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <div class="price-box reveal">
         <div class="price-label">MONTHLY</div>
         <div class="price"><span class="yen">¥</span>40,000<span class="kara">〜</span><span class="unit">/ 月（税込予定）</span></div>
-        <div class="price-sub">2年契約 ・ 初回支払金 ¥150,000（初回のみ） ・ 駐車場代込み</div>
+        <div class="price-sub">1年契約 ・ 初回支払金 ¥150,000（初回のみ） ・ 駐車場代込み</div>
       </div>
       <ul class="plan-items reveal">
         <li><span class="k">月額</span><span class="v">40,000円〜　※ポルシェ 718ボクスター：40,000円／その他の車種：お問い合わせ</span></li>
-        <li><span class="k">契約期間</span><span class="v">2年間</span></li>
+        <li><span class="k">契約期間</span><span class="v">1年間</span></li>
         <li><span class="k">ご利用枠</span><span class="v">お一人さま 年間40日 ・ 年間最大走行 3,000km</span></li>
         <li><span class="k">初回支払金</span><span class="v">150,000円（初回登録時のみ）</span></li>
         <li><span class="k">任意保険</span><span class="v">対人・対物・車両保険 付帯</span></li>
-        <li><span class="k">駐車場</span><span class="v">屋内立体駐車場 込み（雨風なし）</span></li>
+        <li><span class="k">駐車場</span><span class="v">屋内駐車場 込み</span></li>
         <li><span class="k">アクセス</span><span class="v">伊勢原駅 徒歩1分（新宿からロマンスカーで1本）<br>お車なら都内から約40〜50分 ・ マイカー来場可</span></li>
         <li><span class="k">メンテナンス</span><span class="v">VELORA CLUBが一括管理</span></li>
       </ul>
     </div>
+    <div class="included reveal">
+      <h3 class="included-title">月額料金に、すべて含まれています</h3>
+      <p class="included-sub">下記の費用はすべて月額に込み。追加のランニングコストはかかりません。</p>
+      <ul class="included-list">
+        <li><span class="ic-h">任意保険</span>対人・対物・車両保険（免責補償含む）</li>
+        <li><span class="ic-h">駐車場代</span>伊勢原駅 徒歩1分・屋内駐車場</li>
+        <li><span class="ic-h">定期メンテナンス</span>点検・整備・消耗品交換の一括管理</li>
+        <li><span class="ic-h">車検・整備費用</span>契約期間中の車検・法定点検</li>
+        <li><span class="ic-h">各種税金</span>自動車税・重量税などの維持関連税</li>
+        <li><span class="ic-h">値下がりリスク</span>残価は当社が設定。売却時の価値下落を負担しません</li>
+      </ul>
+      <p class="included-foot">別途ご負担いただくのは、走行にかかるガソリン代・高速代・任意の付帯サービスのみです。</p>
     <p class="plan-note reveal">※ 詳細な利用規約・共同所有契約の内容は、ウェイティングリストご登録者へ優先的にご案内いたします。</p>
   </div>
 </section>
@@ -820,7 +841,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
         <span class="r-num">02</span>
         <span class="r-label">Reason 02</span>
         <h3><em>都内の高額な駐車場代</em>からの解放</h3>
-        <p>都内の屋内駐車場は月5万円を超えることも珍しくありません。伊勢原だからこそ、雨風を防ぐ屋内立体駐車場を月額に含めることができました。この立地こそが、月4万円〜という価格の裏付けです。</p>
+        <p>都内の屋内駐車場は月5万円を超えることも珍しくありません。伊勢原だからこそ、雨風を防ぐ屋内駐車場を月額に含めることができました。この立地こそが、月4万円〜という価格の裏付けです。</p>
       </div>
     </div>
     <div class="access-grid reveal">
@@ -836,7 +857,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </div>
       <div class="access-cell">
         <span class="a-icon">Base</span>
-        <h3>伊勢原駅 徒歩1分<br>屋内立体駐車場</h3>
+        <h3>伊勢原駅 徒歩1分<br>屋内駐車場</h3>
         <p>雨風を気にせず、駅からすぐ。受け取りも返却もスムーズです。</p>
       </div>
     </div>
@@ -906,17 +927,17 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <span class="sec-label">Mechanism</span>
       <h2 class="sec-title">なぜ、月4万円から乗れるのか。</h2>
       <div class="hairline"></div>
-      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">秘密は「残価設定」の仕組みにあります。契約終了時の車両価値（残価）をVELORA CLUBが予め決定。お客様にご負担いただくのは、車両価格まるごとではなく、2年間の値下がり分だけです。</p>
+      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">秘密は「残価設定」の仕組みにあります。契約終了時の車両価値（残価）をVELORA CLUBが予め決定。お客様にご負担いただくのは、車両価格まるごとではなく、1年間の値下がり分だけです。</p>
     </div>
     <div class="mech-grid">
-      <div class="mech-figure reveal" role="img" aria-label="残価設定の仕組み：お支払いは車両価格から残価を除いた2年間の値下がり分のみ">
+      <div class="mech-figure reveal" role="img" aria-label="残価設定の仕組み：お支払いは車両価格から残価を除いた1年間の値下がり分のみ">
         <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif">
           <!-- 軸 -->
           <line x1="80" y1="40" x2="80" y2="330" stroke="#9BA1A6" stroke-width="1"/>
           <line x1="80" y1="330" x2="660" y2="330" stroke="#9BA1A6" stroke-width="1"/>
           <text x="70" y="36" fill="#9BA1A6" font-size="15" text-anchor="end">車両<tspan x="70" dy="18">価値</tspan></text>
           <text x="80" y="358" fill="#F1EDE3" font-size="16" text-anchor="middle">契約開始</text>
-          <text x="620" y="358" fill="#F1EDE3" font-size="16" text-anchor="middle">2年後（契約終了）</text>
+          <text x="620" y="358" fill="#F1EDE3" font-size="16" text-anchor="middle">1年後（契約終了）</text>
           <!-- 残価ゾーン -->
           <rect x="80" y="200" width="540" height="130" fill="#1F2427"/>
           <line x1="80" y1="200" x2="660" y2="200" stroke="#C9A96B" stroke-width="1.5" stroke-dasharray="7 6"/>
@@ -925,7 +946,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
           <!-- 値下がり分（支払い対象） -->
           <path d="M80,60 L620,200 L80,200 Z" fill="rgba(201,169,107,.28)" stroke="#C9A96B" stroke-width="2"/>
           <text x="215" y="150" fill="#F1EDE3" font-size="17" text-anchor="middle">お支払いは</text>
-          <text x="215" y="175" fill="#C9A96B" font-size="19" font-weight="bold" text-anchor="middle">2年間の値下がり分だけ</text>
+          <text x="215" y="175" fill="#C9A96B" font-size="19" font-weight="bold" text-anchor="middle">1年間の値下がり分だけ</text>
           <!-- 車両価格ラベル -->
           <circle cx="80" cy="60" r="4" fill="#C9A96B"/>
           <text x="94" y="56" fill="#F1EDE3" font-size="16">車両価格</text>
@@ -937,11 +958,11 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <ol class="mech-steps reveal">
         <li>
           <h3>残価を、当社が予め決定</h3>
-          <p>2年後の車両価値（残価）を、中古車のプロであるVELORA CLUBが契約時に確定。将来の相場変動リスクはお客様が負いません。</p>
+          <p>1年後の車両価値（残価）を、中古車のプロであるVELORA CLUBが契約時に確定。将来の相場変動リスクはお客様が負いません。</p>
         </li>
         <li>
           <h3>お支払いは「値下がり分」だけ</h3>
-          <p>車両価格から残価を差し引いた、2年間で目減りする分だけをメンバー全員で分担。だから車両まるごと買うより、圧倒的に軽い負担で済みます。</p>
+          <p>車両価格から残価を差し引いた、1年間で目減りする分だけをメンバー全員で分担。だから車両まるごと買うより、圧倒的に軽い負担で済みます。</p>
         </li>
         <li>
           <h3>月4万円〜が実現</h3>
@@ -959,7 +980,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <span class="sec-label">Comparison</span>
       <h2 class="sec-title">レンタル、自己所有と比べて。</h2>
       <div class="hairline"></div>
-      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">ポルシェ 718ボクスター（中古・車両価格700万円）に2年間乗る場合で試算しました。</p>
+      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">ポルシェ 718ボクスター（中古・車両価格700万円）に1年間乗る場合で試算しました。</p>
     </div>
     <div class="compare-wrap reveal">
       <table class="compare">
@@ -985,10 +1006,10 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
             <td><span class="amt">約1,300,000円</span><br>頭金 1,000,000円<br>＋登録諸費用 約300,000円</td>
           </tr>
           <tr>
-            <td class="rowhead">2年間の総支払額</td>
-            <td class="velora"><span class="amt">960,000円</span><br>（月40,000円 × 24ヶ月）<br>※別途初回支払金15万円</td>
-            <td><span class="amt">約2,400,000円</span><br>（月2回利用の場合）</td>
-            <td><span class="amt">約4,390,000円</span><br>＋頭金・諸費用 約1,300,000円</td>
+            <td class="rowhead">1年間の総支払額</td>
+            <td class="velora"><span class="amt">480,000円</span><br>（月40,000円 × 12ヶ月）<br>※別途初回支払金15万円</td>
+            <td><span class="amt">約1,200,000円</span><br>（月2回利用の場合）</td>
+            <td><span class="amt">約2,200,000円</span><br>＋頭金・諸費用 約1,300,000円</td>
           </tr>
           <tr>
             <td class="rowhead">任意保険（対人・対物・車両）</td>
@@ -998,7 +1019,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
           </tr>
           <tr>
             <td class="rowhead">駐車場</td>
-            <td class="velora"><strong>込み</strong><br>伊勢原駅徒歩1分・屋内立体</td>
+            <td class="velora"><strong>込み</strong><br>伊勢原駅徒歩1分・屋内</td>
             <td>不要</td>
             <td>別途 月約20,000円<br>屋内保管はさらに割高</td>
           </tr>
@@ -1011,7 +1032,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
         </tbody>
       </table>
     </div>
-    <p class="compare-note reveal">※ 試算条件（当社調べ）：ポルシェ 718ボクスター（中古・車両価格700万円）を2年間利用した場合。自己所有のローンは頭金100万円・金利3.9%・60回払いで算出。任意保険は30代・車両保険付きの概算、駐車場は屋内保管の相場水準。レンタルは同クラス高級スポーツカーの一般的な料金水準です。特定の事業者・商品を示すものではなく、実際の金額は車種・年式・契約条件・お住まいの地域により変動します。</p>
+    <p class="compare-note reveal">※ 試算条件（当社調べ）：ポルシェ 718ボクスター（中古・車両価格700万円）を1年間利用した場合。自己所有のローンは頭金100万円・金利3.9%・60回払いで算出。任意保険は30代・車両保険付きの概算、駐車場は屋内保管の相場水準。レンタルは同クラス高級スポーツカーの一般的な料金水準です。特定の事業者・商品を示すものではなく、実際の金額は車種・年式・契約条件・お住まいの地域により変動します。</p>
   </div>
 </section>
 
@@ -1034,7 +1055,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </details>
       <details>
         <summary>予約や受け取りはどうすればいいですか？</summary>
-        <p class="faq-a">メンバー専用の予約枠からご希望の日程をお選びいただきます。受け取り・返却は伊勢原駅徒歩1分の屋内立体駐車場にて。電車ならロマンスカーで新宿から1本、マイカーでご来場の場合はそのままお乗り換えいただけます。</p>
+        <p class="faq-a">メンバー専用の予約枠からご希望の日程をお選びいただきます。受け取り・返却は伊勢原駅徒歩1分の屋内駐車場にて。電車ならロマンスカーで新宿から1本、マイカーでご来場の場合はそのままお乗り換えいただけます。</p>
       </details>
       <details>
         <summary>保険はどうなっていますか？事故のときは？</summary>
@@ -1046,11 +1067,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </details>
       <details>
         <summary>メンテナンスや車検は誰が行いますか？</summary>
-        <p class="faq-a">すべてVELORA CLUB（運営：合同会社K-masters）が一括で行います。中古車のプロが車両を選定・管理しているのが私たちの強みです。日常整備から車検まで、プロが車両コンディションを常に管理するので、メンバーの皆様に維持管理の手間は一切ありません。</p>
-      </details>
-      <details>
-        <summary>2年の契約期間中に解約できますか？</summary>
-        <p class="faq-a">2年間の契約期間中の中途解約は、原則としてお受けしておりません。ただし、通常のご利用による損耗であっても、修理費が車両の市場平均価値を上回った場合には、以降の月額のお支払いを免除し、契約は終了となります。その際、初回支払金（15万円）は24ヶ月の月割りで計算し、未経過分をご返金いたします。詳細な条件は契約書にてご確認いただけます。</p>
+        <p class="faq-a">すべてVELORA CLUBが一括で行います。中古車のプロが車両を選定・管理しているのが私たちの強みです。日常整備から車検まで、プロが車両コンディションを常に管理するので、メンバーの皆様に維持管理の手間は一切ありません。</p>
       </details>
       <details>
         <summary>免許取り立てでも利用できますか？</summary>
