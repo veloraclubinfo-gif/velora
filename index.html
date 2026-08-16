@@ -23,14 +23,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --obsidian:#0E1113;
-  --surface:#171B1E;
-  --surface2:#1F2427;
-  --champagne:#C9A96B;
-  --champagne-dim:#9A824F;
-  --ivory:#F1EDE3;
-  --mist:#9BA1A6;
-  --line:rgba(201,169,107,.28);
+  --obsidian:#1C2023;
+  --surface:#23282C;
+  --surface2:#2C3237;
+  --champagne:#DFBE7D;
+  --champagne-dim:#B49560;
+  --ivory:#F6F3EC;
+  --mist:#AEB4B9;
+  --line:rgba(223,190,125,.30);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -175,7 +175,7 @@ section{padding:110px 0;position:relative}
   box-shadow:0 24px 60px rgba(0,0,0,.45);
   transform:translateZ(0);transition:transform .5s ease,box-shadow .5s ease;
 }
-.car-card.featured:hover{transform:translateY(-6px);box-shadow:0 32px 76px rgba(201,169,107,.28)}
+.car-card.featured:hover{transform:translateY(-6px);box-shadow:0 32px 76px rgba(223,190,125,.28)}
 .car-card.featured .car-body{padding:32px 30px 36px}
 .car-card.featured .car-name{color:var(--obsidian)}
 .car-card.featured .car-name small{color:#8A8A8A}
@@ -184,7 +184,7 @@ section{padding:110px 0;position:relative}
 .car-card.featured .car-gens{display:flex;gap:8px;margin-top:16px}
 .gen-btn{font-family:'Cormorant Garamond',serif;font-size:.82rem;letter-spacing:.14em;color:#8A8378;background:#fff;border:1px solid #D8D2C4;padding:5px 16px;border-radius:2px;cursor:pointer;transition:all .25s ease}
 .gen-btn:hover{border-color:var(--champagne)}
-.gen-btn.is-active{color:var(--obsidian);border-color:var(--champagne);background:rgba(201,169,107,.12)}
+.gen-btn.is-active{color:var(--obsidian);border-color:var(--champagne);background:rgba(223,190,125,.12)}
 .gen-slider{position:absolute;inset:0;overflow:hidden}
 .gen-track{display:flex;width:200%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1)}
 .gen-slide{width:50%;height:100%;object-fit:cover;flex:0 0 50%}
@@ -256,7 +256,7 @@ section{padding:110px 0;position:relative}
   padding:56px 48px;
   text-align:center;
   background:
-    radial-gradient(400px 200px at 50% 0%,rgba(201,169,107,.06),transparent 70%),
+    radial-gradient(400px 200px at 50% 0%,rgba(223,190,125,.06),transparent 70%),
     var(--surface);
 }
 .price-label{font-size:.78rem;letter-spacing:.3em;color:var(--champagne);margin-bottom:18px}
@@ -270,7 +270,7 @@ section{padding:110px 0;position:relative}
 .price .unit{font-family:'Noto Sans JP',sans-serif;font-size:.9rem;letter-spacing:.2em;color:var(--mist);margin-left:10px}
 .price-sub{margin-top:14px;font-size:.8rem;color:var(--mist);letter-spacing:.14em}
 .plan-items{list-style:none}
-.included{margin-top:56px;border:1px solid var(--champagne);background:linear-gradient(160deg,rgba(201,169,107,.08),transparent 60%),var(--obsidian);padding:44px 40px}
+.included{margin-top:56px;border:1px solid var(--champagne);background:linear-gradient(160deg,rgba(223,190,125,.08),transparent 60%),var(--obsidian);padding:44px 40px}
 .included-title{font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(1.15rem,2.2vw,1.5rem);letter-spacing:.08em;color:var(--ivory)}
 .included-sub{margin-top:12px;font-size:.85rem;color:var(--mist);letter-spacing:.06em}
 .included-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
@@ -329,7 +329,7 @@ section{padding:110px 0;position:relative}
 .route-figure{border:1px solid var(--line);background:var(--obsidian);padding:30px 18px 14px;margin-bottom:56px}
 .route-figure svg{width:100%;height:auto;display:block}
 .soon .car-photo img{filter:saturate(.35) brightness(.85)}
-.car-photo.no-photo{background:linear-gradient(160deg,#1A1E21,#0E1113);display:flex;align-items:center;justify-content:center}
+.car-photo.no-photo{background:linear-gradient(160deg,#262B2F,#1C2023);display:flex;align-items:center;justify-content:center}
 .photo-pending{font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:.22em;color:var(--mist);text-transform:uppercase}
 .soon-badge{
   position:absolute;top:16px;right:20px;z-index:2;
@@ -342,14 +342,39 @@ section{padding:110px 0;position:relative}
 
 /* mechanism */
 .mechanism{background:var(--surface)}
-.mech-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.mech-figure{border:1px solid var(--line);background:var(--obsidian);padding:28px 22px 18px}
+.mech-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+.mech-reasons{display:flex;flex-direction:column;gap:20px}
+.reason-card{
+  position:relative;border:1px solid var(--line);background:var(--obsidian);
+  padding:26px 28px 26px 92px;transition:border-color .4s ease,transform .4s ease;
+}
+.reason-card:hover{border-color:var(--champagne);transform:translateX(4px)}
+.reason-num{
+  position:absolute;top:22px;right:24px;
+  font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:rgba(223,190,125,.45);letter-spacing:.06em;
+}
+.reason-icon{position:absolute;left:26px;top:50%;transform:translateY(-50%);width:44px;height:44px}
+.reason-icon svg{width:44px;height:44px}
+.reason-card h3{
+  font-family:'Shippori Mincho',serif;font-weight:600;
+  font-size:1rem;letter-spacing:.05em;color:var(--ivory);margin-bottom:8px;padding-right:42px;
+}
+.reason-card p{font-size:.84rem;line-height:1.95;color:var(--mist);letter-spacing:.03em}
+@media(max-width:600px){
+  .reason-card{padding:22px 22px 22px 78px}
+  .reason-icon{left:20px;width:38px;height:38px}
+  .reason-icon svg{width:38px;height:38px}
+}
+.mech-figure{border:1px solid var(--line);background:var(--obsidian);padding:28px 22px 18px;position:sticky;top:96px}
 .mech-figure svg{width:100%;height:auto;display:block}
 .mech-steps{list-style:none;counter-reset:step}
 .mech-steps li{
   counter-increment:step;
-  position:relative;padding:0 0 30px 58px;
+  position:relative;padding:0 0 22px 52px;
 }
+.mech-steps li h3{font-size:.98rem;letter-spacing:.04em;margin-bottom:5px}
+.mech-steps li p{font-size:.83rem;line-height:1.75;color:var(--mist)}
+
 .mech-steps li::before{
   content:counter(step,decimal-leading-zero);
   position:absolute;left:0;top:0;
@@ -369,6 +394,7 @@ section{padding:110px 0;position:relative}
 .mech-note{margin-top:8px;font-size:.7rem;color:var(--mist);line-height:1.9}
 @media(max-width:860px){
   .mech-grid{grid-template-columns:1fr;gap:40px}
+  .mech-figure{position:static}
 }
 
 
@@ -429,7 +455,7 @@ table.compare{
   color:var(--mist);font-size:.78rem;letter-spacing:.16em;white-space:nowrap;
 }
 .compare .velora{
-  background:rgba(201,169,107,.07);
+  background:rgba(223,190,125,.07);
   border-left:1px solid var(--line);border-right:1px solid var(--line);
 }
 .compare thead .velora{color:var(--champagne)}
@@ -470,13 +496,34 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 .foot-theme{font-family:'Shippori Mincho',serif;font-size:.8rem;color:var(--mist);letter-spacing:.3em;margin-top:12px}
 .foot-link{color:var(--champagne);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .foot-link:hover{opacity:.75}
-#tokusho{padding:96px 0}
-.tokusho-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line)}
-.tokusho-list>div{display:grid;grid-template-columns:220px 1fr;gap:0;border-bottom:1px solid var(--line)}
-.tokusho-list dt{padding:20px 24px 20px 0;font-size:.8rem;letter-spacing:.1em;color:var(--champagne);font-weight:600}
-.tokusho-list dd{padding:20px 0;margin:0;font-size:.85rem;line-height:1.9;color:var(--ivory);letter-spacing:.03em}
-.tokusho-note{max-width:820px;margin:24px auto 0;font-size:.72rem;color:var(--mist);letter-spacing:.04em}
-@media(max-width:640px){.tokusho-list>div{grid-template-columns:1fr;gap:0}.tokusho-list dt{padding-bottom:4px}.tokusho-list dd{padding-top:0;padding-bottom:18px}}
+.tokusho-acc{margin:4px 0 6px}
+.tokusho-acc summary{
+  list-style:none;cursor:pointer;display:inline-block;
+  font-size:.68rem;letter-spacing:.1em;color:var(--mist);
+  text-decoration:underline;text-underline-offset:3px;
+  transition:color .3s ease;
+}
+.tokusho-acc summary::-webkit-details-marker{display:none}
+.tokusho-acc summary:hover{color:var(--champagne)}
+.tokusho-acc[open] summary{color:var(--champagne);margin-bottom:14px}
+.tokusho-body{
+  text-align:left;border:1px solid var(--line);
+  padding:20px 22px;margin-bottom:14px;
+  background:rgba(0,0,0,.18);
+  animation:tkFade .4s ease;
+}
+@keyframes tkFade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.tokusho-list{border-top:1px solid var(--line)}
+.tokusho-list>div{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--line)}
+.tokusho-list dt{padding:13px 16px 13px 0;font-size:.68rem;letter-spacing:.08em;color:var(--champagne);font-weight:600}
+.tokusho-list dd{padding:13px 0;margin:0;font-size:.7rem;line-height:1.85;color:var(--mist);letter-spacing:.02em}
+@media(max-width:640px){
+  .tokusho-list>div{grid-template-columns:1fr}
+  .tokusho-list dt{padding:12px 0 2px}
+  .tokusho-list dd{padding:0 0 12px}
+}
+
+
 .foot-legal{font-size:.68rem;color:var(--mist);letter-spacing:.1em;text-align:right;line-height:2}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
@@ -574,13 +621,13 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 .reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:56px}
 .reason{
   border:1px solid var(--champagne);
-  background:linear-gradient(160deg,rgba(201,169,107,.08),transparent 55%),var(--obsidian);
+  background:linear-gradient(160deg,rgba(223,190,125,.08),transparent 55%),var(--obsidian);
   padding:40px 36px;position:relative;overflow:hidden;
 }
 .reason .r-num{
   position:absolute;top:-14px;right:10px;
   font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:5.5rem;line-height:1;color:rgba(201,169,107,.16);
+  font-size:5.5rem;line-height:1;color:rgba(223,190,125,.16);
 }
 .reason .r-label{
   font-family:'Cormorant Garamond',serif;
@@ -841,7 +888,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <ul class="included-list">
         <li><span class="ic-h">任意保険</span>対人・対物・車両保険</li>
         <li><span class="ic-h">駐車場代</span>伊勢原駅 徒歩1分・屋内駐車場</li>
-        <li><span class="ic-h">定期メンテナンス</span>点検・整備・消耗品交換の一括管理</li>
+        <li><span class="ic-h">定期メンテナンス</span>提携修理工場での点検・整備・消耗品交換</li>
         <li><span class="ic-h">車検・整備費用</span>契約期間中の車検・法定点検</li>
         <li><span class="ic-h">各種税金</span>自動車税・重量税などの維持関連税</li>
         <li><span class="ic-h">値下がりリスク</span>残価は当社が設定。売却時の価値下落を負担しません</li>
@@ -898,36 +945,36 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
     <div class="route-figure reveal" role="img" aria-label="経路図：新宿からロマンスカーで1本または車で約40〜50分で伊勢原へ。伊勢原から宮ヶ瀬約30分、箱根約40分、伊豆約90分">
       <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif">
         <!-- 新宿→伊勢原 -->
-        <line x1="80" y1="165" x2="330" y2="165" stroke="#C9A96B" stroke-width="2.5"/>
+        <line x1="80" y1="165" x2="330" y2="165" stroke="#DFBE7D" stroke-width="2.5"/>
         <line x1="80" y1="178" x2="330" y2="178" stroke="#9BA1A6" stroke-width="1.5" stroke-dasharray="6 6"/>
         <text x="205" y="140" fill="#F1EDE3" font-size="15" text-anchor="middle">ロマンスカーで1本</text>
         <text x="205" y="205" fill="#9BA1A6" font-size="14" text-anchor="middle">お車で約40〜50分</text>
         <!-- 新宿 -->
-        <circle cx="80" cy="165" r="7" fill="#0E1113" stroke="#F1EDE3" stroke-width="2"/>
+        <circle cx="80" cy="165" r="7" fill="#1C2023" stroke="#F1EDE3" stroke-width="2"/>
         <text x="80" y="120" fill="#F1EDE3" font-size="18" font-weight="bold" text-anchor="middle">新宿</text>
         <text x="80" y="98" fill="#9BA1A6" font-size="13" text-anchor="middle">都内</text>
         <!-- 伊勢原ハブ -->
-        <rect x="322" y="150" width="30" height="30" transform="rotate(45 337 165)" fill="#C9A96B"/>
-        <text x="337" y="112" fill="#C9A96B" font-size="18" font-weight="bold" text-anchor="middle">伊勢原</text>
+        <rect x="322" y="150" width="30" height="30" transform="rotate(45 337 165)" fill="#DFBE7D"/>
+        <text x="337" y="112" fill="#DFBE7D" font-size="18" font-weight="bold" text-anchor="middle">伊勢原</text>
         <text x="337" y="222" fill="#F1EDE3" font-size="13" text-anchor="middle">VELORA CLUB</text>
         <text x="337" y="240" fill="#9BA1A6" font-size="12" text-anchor="middle">駅から徒歩1分・乗り換え</text>
         <!-- 分岐：宮ヶ瀬 -->
-        <path d="M355,152 Q480,60 610,60" fill="none" stroke="#C9A96B" stroke-width="2"/>
-        <circle cx="610" cy="60" r="6" fill="#0E1113" stroke="#C9A96B" stroke-width="2"/>
+        <path d="M355,152 Q480,60 610,60" fill="none" stroke="#DFBE7D" stroke-width="2"/>
+        <circle cx="610" cy="60" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
         <text x="630" y="55" fill="#F1EDE3" font-size="17" font-weight="bold">宮ヶ瀬</text>
         <text x="630" y="74" fill="#9BA1A6" font-size="13">約30分</text>
         <!-- 分岐：箱根 -->
-        <line x1="360" y1="165" x2="610" y2="165" stroke="#C9A96B" stroke-width="2"/>
-        <circle cx="610" cy="165" r="6" fill="#0E1113" stroke="#C9A96B" stroke-width="2"/>
+        <line x1="360" y1="165" x2="610" y2="165" stroke="#DFBE7D" stroke-width="2"/>
+        <circle cx="610" cy="165" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
         <text x="630" y="160" fill="#F1EDE3" font-size="17" font-weight="bold">箱根</text>
         <text x="630" y="179" fill="#9BA1A6" font-size="13">約40分</text>
         <!-- 分岐：伊豆 -->
-        <path d="M355,178 Q480,270 610,270" fill="none" stroke="#C9A96B" stroke-width="2"/>
-        <circle cx="610" cy="270" r="6" fill="#0E1113" stroke="#C9A96B" stroke-width="2"/>
+        <path d="M355,178 Q480,270 610,270" fill="none" stroke="#DFBE7D" stroke-width="2"/>
+        <circle cx="610" cy="270" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
         <text x="630" y="265" fill="#F1EDE3" font-size="17" font-weight="bold">伊豆</text>
         <text x="630" y="284" fill="#9BA1A6" font-size="13">約90分</text>
         <!-- 凡例 -->
-        <line x1="80" y1="312" x2="112" y2="312" stroke="#C9A96B" stroke-width="2.5"/>
+        <line x1="80" y1="312" x2="112" y2="312" stroke="#DFBE7D" stroke-width="2.5"/>
         <text x="120" y="317" fill="#9BA1A6" font-size="12">電車・お乗り換え後のドライブ</text>
         <line x1="320" y1="312" x2="352" y2="312" stroke="#9BA1A6" stroke-width="1.5" stroke-dasharray="6 6"/>
         <text x="360" y="317" fill="#9BA1A6" font-size="12">マイカーでのご来場</text>
@@ -960,7 +1007,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <span class="sec-label">Mechanism</span>
       <h2 class="sec-title">なぜ、月3.7万円から乗れるのか。</h2>
       <div class="hairline"></div>
-      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">秘密は「残価設定」の仕組みにあります。契約終了時の車両価値（残価）をVELORA CLUBが予め決定。お客様にご負担いただくのは、車両価格まるごとではなく、1年間の値下がり分だけです。</p>
+      <p style="margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em">残価設定、提携仕入れ、提携整備。3つの仕組みを重ねることで、この価格を実現しています。</p>
     </div>
     <div class="mech-grid">
       <div class="mech-figure reveal" role="img" aria-label="残価設定の仕組み：お支払いは車両価格から残価を除いた1年間の値下がり分のみ">
@@ -972,36 +1019,60 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
           <text x="80" y="358" fill="#F1EDE3" font-size="16" text-anchor="middle">契約開始</text>
           <text x="620" y="358" fill="#F1EDE3" font-size="16" text-anchor="middle">1年後（契約終了）</text>
           <!-- 残価ゾーン -->
-          <rect x="80" y="200" width="540" height="130" fill="#1F2427"/>
-          <line x1="80" y1="200" x2="660" y2="200" stroke="#C9A96B" stroke-width="1.5" stroke-dasharray="7 6"/>
+          <rect x="80" y="200" width="540" height="130" fill="#2C3237"/>
+          <line x1="80" y1="200" x2="660" y2="200" stroke="#DFBE7D" stroke-width="1.5" stroke-dasharray="7 6"/>
           <text x="350" y="258" fill="#9BA1A6" font-size="17" text-anchor="middle">契約終了時の残価（VELORA CLUBが予め決定）</text>
-          <text x="350" y="284" fill="#C9A96B" font-size="18" font-weight="bold" text-anchor="middle">この部分のお支払いは不要</text>
+          <text x="350" y="284" fill="#DFBE7D" font-size="18" font-weight="bold" text-anchor="middle">この部分のお支払いは不要</text>
           <!-- 値下がり分（支払い対象） -->
-          <path d="M80,60 L620,200 L80,200 Z" fill="rgba(201,169,107,.28)" stroke="#C9A96B" stroke-width="2"/>
+          <path d="M80,60 L620,200 L80,200 Z" fill="rgba(223,190,125,.28)" stroke="#DFBE7D" stroke-width="2"/>
           <text x="215" y="150" fill="#F1EDE3" font-size="17" text-anchor="middle">お支払いは</text>
-          <text x="215" y="175" fill="#C9A96B" font-size="19" font-weight="bold" text-anchor="middle">1年間の値下がり分だけ</text>
+          <text x="215" y="175" fill="#DFBE7D" font-size="19" font-weight="bold" text-anchor="middle">1年間の値下がり分だけ</text>
           <!-- 車両価格ラベル -->
-          <circle cx="80" cy="60" r="4" fill="#C9A96B"/>
+          <circle cx="80" cy="60" r="4" fill="#DFBE7D"/>
           <text x="94" y="56" fill="#F1EDE3" font-size="16">車両価格</text>
           <!-- 価値の推移線 -->
-          <line x1="80" y1="60" x2="620" y2="200" stroke="#C9A96B" stroke-width="2.5"/>
-          <circle cx="620" cy="200" r="4" fill="#C9A96B"/>
+          <line x1="80" y1="60" x2="620" y2="200" stroke="#DFBE7D" stroke-width="2.5"/>
+          <circle cx="620" cy="200" r="4" fill="#DFBE7D"/>
         </svg>
       </div>
-      <ol class="mech-steps reveal">
-        <li>
-          <h3>残価を、当社が予め決定</h3>
-          <p>1年後の車両価値（残価）を、中古車のプロであるVELORA CLUBが契約時に確定。将来の相場変動リスクはお客様が負いません。</p>
-        </li>
-        <li>
-          <h3>お支払いは「値下がり分」だけ</h3>
-          <p>車両価格から残価を差し引いた、1年間で目減りする分だけをメンバー全員で分担。だから車両まるごと買うより、圧倒的に軽い負担で済みます。</p>
-        </li>
-        <li>
-          <h3>月3.7万円〜が実現</h3>
-          <p>値下がり分の分担に、保険・駐車場・メンテナンスまで含めてこの価格。憧れの一台に、最も合理的な形で乗る方法です。</p>
-        </li>
-      </ol>
+      <div class="mech-reasons reveal">
+        <div class="reason-card">
+          <span class="reason-num">01</span>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#DFBE7D" stroke-width="1.6">
+              <rect x="8" y="26" width="28" height="11" fill="rgba(223,190,125,.3)" stroke="none"/>
+              <path d="M8 10 L36 26 L8 26 Z" fill="rgba(223,190,125,.85)" stroke="none"/>
+              <line x1="8" y1="26" x2="36" y2="26" stroke="#DFBE7D" stroke-width="1.4"/>
+              <line x1="8" y1="8" x2="8" y2="37"/><line x1="8" y1="37" x2="37" y2="37"/>
+            </svg>
+          </div>
+          <h3>残価は、当社が負担</h3>
+          <p>契約終了時の車両価値（残価）を、中古車のプロである当社が契約時に確定。ご負担いただくのは車両価格まるごとではなく、1年間の値下がり分だけです。相場変動のリスクは当社が引き受けます。</p>
+        </div>
+        <div class="reason-card">
+          <span class="reason-num">02</span>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#DFBE7D" stroke-width="1.6" stroke-linejoin="round">
+              <path d="M7 17 L10 9 L34 9 L37 17 Z" fill="rgba(223,190,125,.25)"/>
+              <path d="M9 17 L9 35 L35 35 L35 17"/>
+              <path d="M18 35 L18 24 L26 24 L26 35"/>
+            </svg>
+          </div>
+          <h3>提携販売店から、安く仕入れる</h3>
+          <p>中古車販売店との提携により、業者オークションを含む独自の仕入れルートを確保。相場を日々見ている専門店の目で状態の良い一台を調達し、抑えたコストを月額に還元しています。</p>
+        </div>
+        <div class="reason-card">
+          <span class="reason-num">03</span>
+          <div class="reason-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="#DFBE7D" stroke-width="1.7" stroke-linejoin="round">
+              <path d="M18.5 7 h7 l1 4.6 3.2 1.9 4.3-1.8 3.5 6.1-3.3 3.2v3.7l3.3 3.2-3.5 6.1-4.3-1.8-3.2 1.9-1 4.6h-7l-1-4.6-3.2-1.9-4.3 1.8-3.5-6.1 3.3-3.2v-3.7l-3.3-3.2 3.5-6.1 4.3 1.8 3.2-1.9z" fill="rgba(223,190,125,.18)"/>
+              <circle cx="22" cy="22" r="5.2" fill="#1C2023"/>
+            </svg>
+          </div>
+          <h3>提携工場で、整備費も圧縮</h3>
+          <p>提携修理工場を完備し、効率的なメンテナンス形式を確立。点検・整備・消耗品交換を計画的にまとめて実施することで、保険・駐車場込みという価格設定を支えています。</p>
+        </div>
+      </div>
     </div>
     <p class="mech-note reveal">※ 図はイメージです。残価および月額は車種・年式・市場動向により個別に設定します。</p>
   </div>
@@ -1180,29 +1251,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<section id="tokusho">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="sec-label">Legal</span>
-      <h2 class="sec-title">特定商取引法に基づく表記</h2>
-      <div class="hairline"></div>
-    </div>
-    <dl class="tokusho-list reveal">
-      <div><dt>販売事業者</dt><dd>合同会社K-masters</dd></div>
-      <div><dt>運営統括責任者</dt><dd>お客様からのご請求に応じて遅滞なく開示いたします。</dd></div>
-      <div><dt>所在地</dt><dd>神奈川県横浜市浅間町1-4-3 ウィザードビル402</dd></div>
-      <div><dt>電話番号</dt><dd>0463-64-2856<br>※お問い合わせは原則メールまたはLINEにて承ります。</dd></div>
-      <div><dt>メールアドレス</dt><dd>veloraclubinfo@gmail.com</dd></div>
-      <div><dt>販売価格</dt><dd>月額 40,000円〜（税込・車種により異なります）／ 初回支払金 150,000円<br>詳細は各車種のプランおよびご契約時にご案内します。</dd></div>
-      <div><dt>商品代金以外の必要料金</dt><dd>ガソリン代、高速道路料金、駐車場（拠点以外）などの実費。任意の付帯サービスをご利用の場合はその料金。</dd></div>
-      <div><dt>お支払い方法</dt><dd>クレジットカード／銀行振込</dd></div>
-      <div><dt>お支払い時期</dt><dd>ご契約内容に基づき、別途定める期日にお支払いいただきます。</dd></div>
-      <div><dt>役務の提供時期</dt><dd>ご契約確定後、車両のご用意が整い次第、利用開始日をご案内します。</dd></div>
-      <div><dt>契約期間・中途解約</dt><dd>契約期間は1年間です。原則として期間中の中途解約はできません。やむを得ない事由による取扱いはご契約時の規約に定めます。</dd></div>
-      <div><dt>返品・キャンセル</dt><dd>役務（共同利用サービス）の性質上、提供開始後のご返金・キャンセルは原則承れません。ウェイティングリストへのご登録の時点では契約義務は発生しません。</dd></div>
-    </dl>
-  </div>
-</section>
+
 
 <footer>
   <div class="wrap foot-grid">
@@ -1213,7 +1262,25 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
     <div class="foot-legal">
       VELORA CLUB（ヴェローラクラブ）｜高級車の共同所有カーシェア<br>
       運営：合同会社K-masters<br>
-      <span class="foot-link" data-target="#tokusho" role="link" tabindex="0">特定商取引法に基づく表記</span><br>
+      <details class="tokusho-acc" id="tokushoAcc">
+        <summary>特定商取引法に基づく表記</summary>
+        <div class="tokusho-body">
+          <dl class="tokusho-list">
+      <div><dt>販売事業者</dt><dd>合同会社K-masters</dd></div>
+      <div><dt>運営統括責任者</dt><dd>お客様からのご請求に応じて遅滞なく開示いたします。</dd></div>
+      <div><dt>所在地</dt><dd>神奈川県横浜市浅間町1-4-3 ウィザードビル402</dd></div>
+      <div><dt>電話番号</dt><dd>0463-64-2856<br>※お問い合わせは原則メールまたはLINEにて承ります。</dd></div>
+      <div><dt>メールアドレス</dt><dd>veloraclubinfo@gmail.com</dd></div>
+      <div><dt>販売価格</dt><dd>月額 37,000円〜（税込・車種により異なります）／ 初回支払金 150,000円<br>詳細は各車種のプランおよびご契約時にご案内します。</dd></div>
+      <div><dt>商品代金以外の必要料金</dt><dd>ガソリン代、高速道路料金、駐車場（拠点以外）などの実費。任意の付帯サービスをご利用の場合はその料金。</dd></div>
+      <div><dt>お支払い方法</dt><dd>クレジットカード／銀行振込</dd></div>
+      <div><dt>お支払い時期</dt><dd>ご契約内容に基づき、別途定める期日にお支払いいただきます。</dd></div>
+      <div><dt>役務の提供時期</dt><dd>ご契約確定後、車両のご用意が整い次第、利用開始日をご案内します。</dd></div>
+      <div><dt>契約期間・中途解約</dt><dd>契約期間は1年間です。原則として期間中の中途解約はできません。やむを得ない事由による取扱いはご契約時の規約に定めます。</dd></div>
+      <div><dt>返品・キャンセル</dt><dd>役務（共同利用サービス）の性質上、提供開始後のご返金・キャンセルは原則承れません。ウェイティングリストへのご登録の時点では契約義務は発生しません。</dd></div>
+    </dl>
+        </div>
+      </details>
       &copy; 2026 VELORA CLUB. All rights reserved.
     </div>
   </div>
@@ -1323,6 +1390,7 @@ document.getElementById('submitBtn').addEventListener('click',async()=>{
       });
     });
   });
+
 </script>
 </body>
 </html>
