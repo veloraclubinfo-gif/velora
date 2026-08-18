@@ -424,8 +424,51 @@ section{padding:110px 0;position:relative}
   padding:0 0 28px 34px;font-size:.86rem;color:var(--mist);line-height:2;
 }
 .wl-lead{margin-top:24px;font-size:.88rem;color:var(--mist);max-width:40em;line-height:1.95}
-.line-float{
+.iab-notice{
+  position:sticky;top:0;z-index:500;
+  background:var(--champagne);color:var(--obsidian);
+}
+.iab-inner{
+  max-width:1080px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:flex-start;gap:11px;
+}
+.iab-icon{flex:0 0 20px;width:20px;height:20px;margin-top:1px}
+.iab-icon svg{width:20px;height:20px;display:block}
+.iab-text{
+  flex:1;font-size:.78rem;line-height:1.65;letter-spacing:.02em;
+  font-weight:500;
+}
+.iab-text strong{font-weight:700}
+.iab-close{
+  flex:0 0 auto;background:transparent;border:none;cursor:pointer;
+  font-size:1.3rem;line-height:1;color:var(--obsidian);
+  padding:0 2px;opacity:.6;
+}
+.iab-close:hover{opacity:1}
+@media(max-width:600px){
+  .iab-inner{padding:11px 14px;gap:9px}
+  .iab-text{font-size:.73rem}
+}
+.line-float-wrap{
   position:fixed;right:24px;bottom:24px;z-index:400;
+  display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+}
+.line-float-tip{
+  background:var(--champagne);color:var(--obsidian);
+  font-size:.68rem;line-height:1.5;letter-spacing:.02em;
+  padding:9px 14px;border-radius:6px;max-width:225px;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  opacity:0;visibility:hidden;transform:translateY(6px);
+  transition:opacity .45s ease,transform .45s ease,visibility .45s;
+}
+.line-float-tip strong{font-weight:700}
+.line-float-wrap.show .line-float-tip{opacity:1;visibility:visible;transform:none}
+@media(max-width:600px){
+  .line-float-wrap{right:16px;bottom:16px}
+  .line-float-tip{font-size:.65rem;max-width:180px;padding:7px 11px}
+}
+.line-float{
+  position:relative;
   display:inline-flex;align-items:center;gap:10px;
   background:#06C755;color:#fff;text-decoration:none;
   padding:14px 24px 14px 18px;border-radius:999px;
@@ -441,7 +484,7 @@ body.menu-open .line-float{opacity:0!important;visibility:hidden!important}
 .line-float-icon{width:26px;height:26px;display:block;flex:0 0 26px}
 .line-float-icon svg{width:26px;height:26px;display:block}
 @media(max-width:600px){
-  .line-float{right:16px;bottom:16px;padding:13px 20px 13px 15px;font-size:.82rem}
+  .line-float{padding:13px 20px 13px 15px;font-size:.82rem}
   .line-float-icon{width:23px;height:23px;flex:0 0 23px}
   .line-float-icon svg{width:23px;height:23px}
 }
@@ -470,6 +513,10 @@ body.menu-open .line-float{opacity:0!important;visibility:hidden!important}
   box-shadow:0 12px 30px rgba(6,199,85,.22);
 }
 .line-btn-lg:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(6,199,85,.3);opacity:.94}
+.line-tip{
+  margin-top:18px;font-size:.72rem;line-height:1.8;
+  color:var(--mist);letter-spacing:.02em;
+}
 .line-steps{
   list-style:none;display:flex;justify-content:center;gap:14px;
   margin:34px 0 0;padding:0;flex-wrap:wrap;
@@ -731,6 +778,20 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 </script>
 </head>
 <body>
+
+<div class="iab-notice" id="iabNotice" role="alert" hidden>
+  <div class="iab-inner">
+    <span class="iab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1C2023" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.3v.2"/>
+      </svg>
+    </span>
+    <p class="iab-text">
+      アプリ内ブラウザで表示中です。<strong>LINEの友だち追加ができない場合</strong>は、右上（または右下）の「…」から<strong>「ブラウザで開く」</strong>を選択してください。
+    </p>
+    <button class="iab-close" id="iabClose" type="button" aria-label="閉じる">×</button>
+  </div>
+</div>
 
 <header>
   <div class="nav">
@@ -1259,6 +1320,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <h3 class="line-panel-title">公式LINEから、お問い合わせ・ご登録</h3>
       <p class="line-panel-text">ご質問、空き状況の確認、ご入会のお申し込みまで、すべて公式LINEで承ります。友だち追加後、トークからお気軽にご連絡ください。</p>
       <a class="line-btn-lg" href="https://lin.ee/NU6wuUF" target="_blank" rel="noopener">友だち追加してお問い合わせ</a>
+      <p class="line-tip">※ TikTok・Instagramなどのアプリ内から開いている場合、ボタンが反応しないことがあります。その際は画面の「…」から「ブラウザで開く」をお試しください。</p>
       <ul class="line-steps">
         <li><span>01</span>友だち追加</li>
         <li><span>02</span>トークでご連絡</li>
@@ -1304,7 +1366,11 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
   </div>
 </footer>
 
-<a class="line-float" href="https://lin.ee/NU6wuUF" target="_blank" rel="noopener" aria-label="公式LINEで問い合わせる">
+<div class="line-float-wrap" id="lineFloatWrap">
+  <div class="line-float-tip" id="lineFloatTip" hidden>
+    開かない場合は「…」から<br><strong>ブラウザで開く</strong>をお試しください
+  </div>
+  <a class="line-float" href="https://lin.ee/NU6wuUF" target="_blank" rel="noopener" aria-label="公式LINEで問い合わせる">
   <span class="line-float-icon" aria-hidden="true">
     <svg viewBox="0 0 32 32" fill="none">
       <path d="M16 4C9.4 4 4 8.3 4 13.6c0 4.7 4.3 8.7 10 9.5.4.1.9.3 1.1.6.2.3.1.7.1 1l-.2 1.1c0 .3-.3 1.3 1.1.7 1.4-.6 7.5-4.4 10.2-7.5 1.9-2 2.7-4.1 2.7-5.4C29 8.3 22.6 4 16 4Z" fill="#fff"/>
@@ -1312,6 +1378,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
   </span>
   <span class="line-float-text">LINEで相談</span>
 </a>
+</div>
 
 
 <script>
@@ -1368,13 +1435,16 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
 
   // LINE追従ボタン
   (function(){
+    var wrap=document.getElementById('lineFloatWrap');
     var fab=document.querySelector('.line-float');
-    if(!fab)return;
+    if(!wrap||!fab)return;
     var wl=document.getElementById('waitlist');
     var inWl=false;
     var update=function(){
       var scrolled=window.scrollY>520;
-      fab.classList.toggle('show', scrolled && !inWl);
+      var show=scrolled && !inWl;
+      fab.classList.toggle('show', show);
+      wrap.classList.toggle('show', show);
     };
     if(wl&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es){
@@ -1384,6 +1454,22 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
     }
     window.addEventListener('scroll',update,{passive:true});
     update();
+  })();
+
+  // アプリ内ブラウザ判定（TikTok/Instagram/Facebook/X/LINE等）
+  (function(){
+    var n=document.getElementById('iabNotice');
+    if(!n)return;
+    var ua=navigator.userAgent||'';
+    var isIAB=/(BytedanceWebview|Bytedance|musical_ly|TikTok|Instagram|FBAN|FBAV|FB_IAB|Line\/|Twitter|KAKAOTALK|Snapchat|Pinterest)/i.test(ua);
+    if(isIAB){
+      n.hidden=false;
+      document.body.classList.add('has-iab-notice');
+      var tip=document.getElementById('lineFloatTip');
+      if(tip)tip.hidden=false;
+    }
+    var c=document.getElementById('iabClose');
+    if(c)c.addEventListener('click',function(){n.hidden=true;});
   })();
 </script>
 </body>
