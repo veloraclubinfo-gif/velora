@@ -454,18 +454,21 @@ section{padding:110px 0;position:relative}
   display:flex;flex-direction:column;align-items:flex-end;gap:8px;
 }
 .line-float-tip{
-  background:var(--champagne);color:var(--obsidian);
-  font-size:.68rem;line-height:1.5;letter-spacing:.02em;
-  padding:9px 14px;border-radius:6px;max-width:225px;
-  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  background:rgba(28,32,35,.72);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1px solid rgba(223,190,125,.22);
+  color:var(--mist);
+  font-size:.63rem;line-height:1.55;letter-spacing:.02em;
+  padding:7px 12px;border-radius:5px;width:max-content;max-width:240px;
   opacity:0;visibility:hidden;transform:translateY(6px);
   transition:opacity .45s ease,transform .45s ease,visibility .45s;
 }
-.line-float-tip strong{font-weight:700}
+.line-float-tip strong{color:rgba(223,190,125,.85);font-weight:600}
 .line-float-wrap.show .line-float-tip{opacity:1;visibility:visible;transform:none}
+.line-float-wrap:hover .line-float-tip{background:rgba(28,32,35,.9);color:var(--ivory)}
 @media(max-width:600px){
   .line-float-wrap{right:16px;bottom:16px}
-  .line-float-tip{font-size:.65rem;max-width:180px;padding:7px 11px}
+  .line-float-tip{font-size:.6rem;max-width:210px;padding:6px 10px}
 }
 .line-float{
   position:relative;
@@ -787,7 +790,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </svg>
     </span>
     <p class="iab-text">
-      アプリ内ブラウザで表示中です。<strong>LINEの友だち追加ができない場合</strong>は、右上（または右下）の「…」から<strong>「ブラウザで開く」</strong>を選択してください。
+      アプリ内ブラウザで表示中です。<strong>LINEの友だち追加ができない場合</strong>は、<strong>「ブラウザで開く」</strong>からお試しください。
     </p>
     <button class="iab-close" id="iabClose" type="button" aria-label="閉じる">×</button>
   </div>
@@ -1320,7 +1323,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <h3 class="line-panel-title">公式LINEから、お問い合わせ・ご登録</h3>
       <p class="line-panel-text">ご質問、空き状況の確認、ご入会のお申し込みまで、すべて公式LINEで承ります。友だち追加後、トークからお気軽にご連絡ください。</p>
       <a class="line-btn-lg" href="https://lin.ee/NU6wuUF" target="_blank" rel="noopener">友だち追加してお問い合わせ</a>
-      <p class="line-tip">※ TikTok・Instagramなどのアプリ内から開いている場合、ボタンが反応しないことがあります。その際は画面の「…」から「ブラウザで開く」をお試しください。</p>
+      <p class="line-tip">※ TikTok・Instagramなどのアプリ内から開いている場合、ボタンが反応しないことがあります。その際は「ブラウザで開く」からお試しください。</p>
       <ul class="line-steps">
         <li><span>01</span>友だち追加</li>
         <li><span>02</span>トークでご連絡</li>
@@ -1367,8 +1370,8 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 </footer>
 
 <div class="line-float-wrap" id="lineFloatWrap">
-  <div class="line-float-tip" id="lineFloatTip" hidden>
-    開かない場合は「…」から<br><strong>ブラウザで開く</strong>をお試しください
+  <div class="line-float-tip" id="lineFloatTip">
+    動作しない場合は<br><strong>ブラウザで開く</strong>をお試しください
   </div>
   <a class="line-float" href="https://lin.ee/NU6wuUF" target="_blank" rel="noopener" aria-label="公式LINEで問い合わせる">
   <span class="line-float-icon" aria-hidden="true">
@@ -1465,8 +1468,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
     if(isIAB){
       n.hidden=false;
       document.body.classList.add('has-iab-notice');
-      var tip=document.getElementById('lineFloatTip');
-      if(tip)tip.hidden=false;
     }
     var c=document.getElementById('iabClose');
     if(c)c.addEventListener('click',function(){n.hidden=true;});
