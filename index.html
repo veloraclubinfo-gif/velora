@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VELORA CLUB（ヴェローラクラブ）| 高級車カーシェア・共同所有 — ポルシェに月4万円から・国産スポーツは3.7万円から | 伊勢原・神奈川</title>
-<meta name="description" content="VELORA CLUB（ヴェローラクラブ）は、ポルシェなどの高級車に月額3.7万円から乗れる共同所有型カーシェア。任意保険・屋内駐車場・メンテナンス込み。拠点は神奈川県伊勢原駅徒歩1分、新宿からロマンスカーで1本。ウェイティングリスト受付中。">
-<meta name="keywords" content="ヴェローラクラブ,VELORA CLUB,カーシェア,高級車,共同所有,ポルシェ,718ボクスター,ケイマン,フェアレディZ,レクサスRC F,伊勢原,神奈川,月3.7万円">
+<title>VELORA CLUB（ヴェローラクラブ）| 高級車カーシェア・共同所有 — ポルシェに月4万円から・国産スポーツは3.7万円から | 伊勢原・23区・横浜・川崎・湘南</title>
+<meta name="description" content="VELORA CLUB（ヴェローラクラブ）は、ポルシェなどの高級車に月額3.7万円から乗れる共同所有型カーシェア。任意保険・屋内駐車場・メンテナンス込み。拠点は伊勢原（運用中）に加え、東京23区内・横浜・川崎・湘南エリアにも展開予定。ウェイティングリスト受付中。">
+<meta name="keywords" content="ヴェローラクラブ,VELORA CLUB,カーシェア,高級車,共同所有,ポルシェ,718ボクスター,ケイマン,フェアレディZ,レクサスRC F,伊勢原,横浜,川崎,湘南,東京23区,月3.7万円">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://veloraclubinfo-gif.github.io/velora/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VELORA CLUB（ヴェローラクラブ）">
 <meta property="og:title" content="VELORA CLUB（ヴェローラクラブ）| 高級車カーシェア・共同所有">
-<meta property="og:description" content="月額3.7万円から。ポルシェ・フェアレディZ NISMOに乗れる共同所有型カーシェア。保険・駐車場・メンテ込み。伊勢原駅徒歩1分。">
+<meta property="og:description" content="月額3.7万円から。ポルシェ・フェアレディZ NISMOに乗れる共同所有型カーシェア。保険・駐車場・メンテ込み。伊勢原に加え、23区内・横浜・川崎・湘南へ拠点拡大予定。">
 <meta property="og:url" content="https://veloraclubinfo-gif.github.io/velora/">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
@@ -326,8 +326,6 @@ section{padding:110px 0;position:relative}
 }
 
 
-.route-figure{border:1px solid var(--line);background:var(--obsidian);padding:30px 18px 14px;margin-bottom:56px}
-.route-figure svg{width:100%;height:auto;display:block}
 .soon .car-photo img{filter:saturate(.35) brightness(.85)}
 .car-photo.no-photo{background:linear-gradient(160deg,#262B2F,#1C2023);display:flex;align-items:center;justify-content:center}
 .photo-pending{font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:.22em;color:var(--mist);text-transform:uppercase}
@@ -723,6 +721,36 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 }
 .compare .velora .amt{color:var(--champagne);font-size:1.7em}
 /* reasons */
+.loc-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:20px;margin-bottom:20px;
+}
+.loc-card{
+  border:1px solid var(--line);background:var(--obsidian);
+  padding:26px 22px;transition:border-color .35s ease,transform .35s ease;
+}
+.loc-card:hover{border-color:var(--champagne);transform:translateY(-3px)}
+.loc-card.is-active{border-color:var(--champagne);background:linear-gradient(160deg,rgba(223,190,125,.09),transparent 60%),var(--obsidian)}
+.loc-status{
+  display:inline-block;font-size:.66rem;letter-spacing:.1em;
+  color:var(--mist);border:1px solid var(--line);
+  padding:4px 11px;margin-bottom:14px;
+}
+.loc-status.is-active{color:var(--obsidian);background:var(--champagne);border-color:var(--champagne);font-weight:700}
+.loc-card h3{
+  font-family:'Shippori Mincho',serif;font-weight:600;
+  font-size:1.02rem;letter-spacing:.06em;color:var(--ivory);margin-bottom:9px;
+}
+.loc-card p{font-size:.78rem;line-height:1.75;color:var(--mist);letter-spacing:.02em}
+.loc-note{font-size:.74rem;line-height:1.9;color:var(--mist);letter-spacing:.02em;margin-bottom:60px}
+.drive-sub{margin-bottom:28px}
+@media(max-width:640px){
+  .loc-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .loc-card{padding:20px 16px}
+}
+@media(max-width:420px){
+  .loc-grid{grid-template-columns:1fr}
+}
 .reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:56px}
 .reason{
   border:1px solid var(--champagne);
@@ -765,6 +793,13 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
     "addressLocality": "伊勢原市",
     "addressCountry": "JP"
   },
+  "areaServed": [
+    {"@type": "City", "name": "伊勢原市"},
+    {"@type": "AdministrativeArea", "name": "東京23区"},
+    {"@type": "City", "name": "横浜市"},
+    {"@type": "City", "name": "川崎市"},
+    {"@type": "AdministrativeArea", "name": "湘南エリア"}
+  ],
   "parentOrganization": {
     "@type": "Organization",
     "name": "合同会社K-masters",
@@ -856,7 +891,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </div>
       <div class="concept-cell">
         <h3>保険も駐車場も、すべて込み</h3>
-        <p>対人・対物・車両保険に加え、駐車場代も月額に含まれます。保管は伊勢原駅から徒歩1分の屋内駐車場。雨風や紫外線から愛車を守り、電車なら手ぶらで、マイカーならそのまま乗り換えて走り出せます。</p>
+        <p>対人・対物・車両保険に加え、駐車場代も月額に含まれます。保管は各拠点の屋内駐車場。雨風や紫外線から愛車を守り、電車なら手ぶらで、マイカーならそのまま乗り換えて走り出せます。</p>
       </div>
       <div class="concept-cell">
         <h3>1年間、じっくり付き合う</h3>
@@ -1008,7 +1043,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
         <li><span class="k">初回支払金</span><span class="v">150,000円（初回登録時のみ）</span></li>
         <li><span class="k">任意保険</span><span class="v">対人・対物・車両保険 付帯</span></li>
         <li><span class="k">駐車場</span><span class="v">屋内駐車場 込み</span></li>
-        <li><span class="k">アクセス</span><span class="v">伊勢原駅 徒歩1分（新宿からロマンスカーで1本）<br>お車なら都内から約40〜50分 ・ マイカー来場可</span></li>
+        <li><span class="k">拠点</span><span class="v">伊勢原（運用中）<br>東京23区内・横浜・川崎・湘南（開設予定）</span></li>
         <li><span class="k">メンテナンス</span><span class="v">VELORA CLUBが一括管理</span></li>
       </ul>
     </div>
@@ -1017,7 +1052,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       <p class="included-sub">下記の費用はすべて月額に込み。追加のランニングコストはかかりません。</p>
       <ul class="included-list">
         <li><span class="ic-h">任意保険</span>対人・対物・車両保険</li>
-        <li><span class="ic-h">駐車場代</span>伊勢原駅 徒歩1分・屋内駐車場</li>
+        <li><span class="ic-h">駐車場代</span>各拠点の屋内駐車場（伊勢原は駅徒歩1分）</li>
         <li><span class="ic-h">定期メンテナンス</span>提携修理工場での点検・整備・消耗品交換</li>
         <li><span class="ic-h">車検・整備費用</span>契約期間中の車検・法定点検</li>
         <li><span class="ic-h">各種税金</span>自動車税・重量税などの維持関連税</li>
@@ -1035,81 +1070,56 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
 <section id="access">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-label">Access &amp; Drive</span>
-      <h2 class="sec-title">伊勢原は、名道への入り口。</h2>
+      <span class="sec-label">Access &amp; Locations</span>
+      <h2 class="sec-title">拠点は、あなたの街のそばへ。</h2>
       <div class="hairline"></div>
-      <p class="access-lead">拠点は伊勢原駅から徒歩1分。あえて都内ではなく、伊勢原を選んだのには2つの理由があります。</p>
+      <p class="access-lead">現在の拠点は伊勢原。東京23区内・横浜・川崎・湘南エリアにも、順次拠点を展開していく予定です。</p>
     </div>
     <div class="reason-grid reveal">
       <div class="reason">
         <span class="r-num">01</span>
         <span class="r-label">Reason 01</span>
-        <h3><em>渋滞からの解放</em></h3>
-        <p>都心で乗り出すと、名道に辿り着くまで渋滞に1時間──それでは興ざめです。伊勢原なら走り出してすぐ、箱根・伊豆・宮ヶ瀬のワインディングが待っています。限られた時間を、渋滞ではなく走る歓びに。</p>
+        <h3><em>暮らしのそばで</em>、受け取れる</h3>
+        <p>拠点がひとつだけだと、そこへ向かう移動だけで気力を使ってしまいます。複数エリアに拠点を構えることで、通勤や帰宅の導線上で気軽に受け取り・返却できる距離感をめざしています。</p>
       </div>
       <div class="reason">
         <span class="r-num">02</span>
         <span class="r-label">Reason 02</span>
         <h3><em>都内の高額な駐車場代</em>からの解放</h3>
-        <p>都内の屋内駐車場は月5万円を超えることも珍しくありません。伊勢原だからこそ、雨風を防ぐ屋内駐車場を月額に含めることができました。この立地こそが、月3.7万円〜という価格の裏付けです。</p>
-      </div>
-    </div>
-    <div class="access-grid reveal">
-      <div class="access-cell">
-        <span class="a-icon">Train</span>
-        <h3>新宿駅から<br>ロマンスカーで1本</h3>
-        <p>小田急線特急で乗り換えなし。手ぶらで来て、そのまま乗り出せます。</p>
-      </div>
-      <div class="access-cell">
-        <span class="a-icon">Car</span>
-        <h3>都内から<br>お車で約40〜50分</h3>
-        <p>マイカーでのご来場も可能。駐車場に停めて、そのままお乗り換えいただけます。</p>
-      </div>
-      <div class="access-cell">
-        <span class="a-icon">Base</span>
-        <h3>伊勢原駅 徒歩1分<br>屋内駐車場</h3>
-        <p>雨風を気にせず、駅からすぐ。受け取りも返却もスムーズです。</p>
+        <p>都内の屋内駐車場は月5万円を超えることも珍しくありません。各拠点の屋内駐車場を月額に含めることで、この負担をゼロに。これが、月3.7万円〜という価格の裏付けです。</p>
       </div>
     </div>
 
-    <div class="route-figure reveal" role="img" aria-label="経路図：新宿からロマンスカーで1本または車で約40〜50分で伊勢原へ。伊勢原から宮ヶ瀬約30分、箱根約40分、伊豆約90分">
-      <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP',sans-serif">
-        <!-- 新宿→伊勢原 -->
-        <line x1="80" y1="165" x2="330" y2="165" stroke="#DFBE7D" stroke-width="2.5"/>
-        <line x1="80" y1="178" x2="330" y2="178" stroke="#9BA1A6" stroke-width="1.5" stroke-dasharray="6 6"/>
-        <text x="205" y="140" fill="#F1EDE3" font-size="15" text-anchor="middle">ロマンスカーで1本</text>
-        <text x="205" y="205" fill="#9BA1A6" font-size="14" text-anchor="middle">お車で約40〜50分</text>
-        <!-- 新宿 -->
-        <circle cx="80" cy="165" r="7" fill="#1C2023" stroke="#F1EDE3" stroke-width="2"/>
-        <text x="80" y="120" fill="#F1EDE3" font-size="18" font-weight="bold" text-anchor="middle">新宿</text>
-        <text x="80" y="98" fill="#9BA1A6" font-size="13" text-anchor="middle">都内</text>
-        <!-- 伊勢原ハブ -->
-        <rect x="322" y="150" width="30" height="30" transform="rotate(45 337 165)" fill="#DFBE7D"/>
-        <text x="337" y="112" fill="#DFBE7D" font-size="18" font-weight="bold" text-anchor="middle">伊勢原</text>
-        <text x="337" y="222" fill="#F1EDE3" font-size="13" text-anchor="middle">VELORA CLUB</text>
-        <text x="337" y="240" fill="#9BA1A6" font-size="12" text-anchor="middle">駅から徒歩1分・乗り換え</text>
-        <!-- 分岐：宮ヶ瀬 -->
-        <path d="M355,152 Q480,60 610,60" fill="none" stroke="#DFBE7D" stroke-width="2"/>
-        <circle cx="610" cy="60" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
-        <text x="630" y="55" fill="#F1EDE3" font-size="17" font-weight="bold">宮ヶ瀬</text>
-        <text x="630" y="74" fill="#9BA1A6" font-size="13">約30分</text>
-        <!-- 分岐：箱根 -->
-        <line x1="360" y1="165" x2="610" y2="165" stroke="#DFBE7D" stroke-width="2"/>
-        <circle cx="610" cy="165" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
-        <text x="630" y="160" fill="#F1EDE3" font-size="17" font-weight="bold">箱根</text>
-        <text x="630" y="179" fill="#9BA1A6" font-size="13">約40分</text>
-        <!-- 分岐：伊豆 -->
-        <path d="M355,178 Q480,270 610,270" fill="none" stroke="#DFBE7D" stroke-width="2"/>
-        <circle cx="610" cy="270" r="6" fill="#1C2023" stroke="#DFBE7D" stroke-width="2"/>
-        <text x="630" y="265" fill="#F1EDE3" font-size="17" font-weight="bold">伊豆</text>
-        <text x="630" y="284" fill="#9BA1A6" font-size="13">約90分</text>
-        <!-- 凡例 -->
-        <line x1="80" y1="312" x2="112" y2="312" stroke="#DFBE7D" stroke-width="2.5"/>
-        <text x="120" y="317" fill="#9BA1A6" font-size="12">電車・お乗り換え後のドライブ</text>
-        <line x1="320" y1="312" x2="352" y2="312" stroke="#9BA1A6" stroke-width="1.5" stroke-dasharray="6 6"/>
-        <text x="360" y="317" fill="#9BA1A6" font-size="12">マイカーでのご来場</text>
-      </svg>
+    <div class="loc-grid reveal">
+      <div class="loc-card is-active">
+        <span class="loc-status is-active">運用中</span>
+        <h3>伊勢原</h3>
+        <p>小田急線 伊勢原駅 徒歩1分・屋内立体駐車場<br>新宿からロマンスカーで1本／お車で約40〜50分</p>
+      </div>
+      <div class="loc-card">
+        <span class="loc-status">拠点開設予定</span>
+        <h3>東京23区内</h3>
+        <p>都心から、もっとも近い距離で。</p>
+      </div>
+      <div class="loc-card">
+        <span class="loc-status">拠点開設予定</span>
+        <h3>横浜</h3>
+        <p>みなとみらい・関内エリアを想定。</p>
+      </div>
+      <div class="loc-card">
+        <span class="loc-status">拠点開設予定</span>
+        <h3>川崎</h3>
+        <p>京浜エリアからのご利用に。</p>
+      </div>
+      <div class="loc-card">
+        <span class="loc-status">拠点開設予定</span>
+        <h3>湘南</h3>
+        <p>海沿いのドライブへ、最短距離で。</p>
+      </div>
     </div>
+    <p class="loc-note reveal">※ 伊勢原拠点は現在運用中です。東京23区内・横浜・川崎・湘南エリアは今後の開設を予定しております。開設時期の詳細は、ウェイティングリストご登録者へ優先的にご案内いたします。</p>
+
+    <p class="fleet-sub drive-sub reveal"><span>Isehara</span>伊勢原拠点からのドライブ例</p>
     <div class="drive-grid reveal">
       <div class="drive-card">
         <span class="drive-time">約40分 — Hakone</span>
@@ -1127,7 +1137,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
         <p>湖畔の爽快ロードを気軽にひとまわり。仕事帰りや半日だけの気分転換にちょうどいい距離です。</p>
       </div>
     </div>
-    <p class="access-note reveal">※ 所要時間は伊勢原拠点からの目安です。交通状況により変動します。</p>
+    <p class="access-note reveal">※ 掲載のドライブ例は伊勢原拠点からの所要時間です。拠点により行き先・所要時間は異なります。交通状況によっても変動します。</p>
   </div>
 </section>
 
@@ -1253,7 +1263,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
           </tr>
           <tr>
             <td class="rowhead">駐車場</td>
-            <td class="velora"><strong>込み</strong><br>伊勢原駅徒歩1分・屋内</td>
+            <td class="velora"><strong>込み</strong><br>各拠点の屋内駐車場</td>
             <td>不要</td>
             <td>別途 月約20,000円<br>屋内保管はさらに割高</td>
           </tr>
@@ -1289,7 +1299,7 @@ footer{padding:70px 0 50px;border-top:1px solid var(--line)}
       </details>
       <details>
         <summary>予約や受け取りはどうすればいいですか？</summary>
-        <p class="faq-a">メンバー専用の予約枠からご希望の日程をお選びいただきます。受け取り・返却は伊勢原駅徒歩1分の屋内駐車場にて。電車ならロマンスカーで新宿から1本、マイカーでご来場の場合はそのままお乗り換えいただけます。</p>
+        <p class="faq-a">メンバー専用の予約枠からご希望の日程をお選びいただきます。受け取り・返却は伊勢原拠点（駅徒歩1分）にて。今後、23区内・横浜・川崎・湘南エリアにも拠点を拡大予定です。電車ならロマンスカーで新宿から1本、マイカーでご来場の場合はそのままお乗り換えいただけます。</p>
       </details>
       <details>
         <summary>保険はどうなっていますか？事故のときは？</summary>
